@@ -1,0 +1,148 @@
+body,
+div,
+h1,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.container {
+    width: 960px;
+    height: 1000px;
+    margin: 0 auto;
+    background-color: #F0FFF0;
+}
+header {
+    height: 100px;
+    box-shadow: 2px 2px 8px #ccc;
+}
+header h1 {
+    color: 	#3CB371;
+    font-size: 60px;
+    font-weight: normal;
+    margin-left: 40px;
+    line-height: 100px;
+}
+.body .content-title ul {
+    margin-top: 20px;
+}
+.body .content-title ul li {
+    float: left;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+.body .active {
+    border-bottom: 2px solid #3CB371;
+}
+.body .content-title ul li a {
+    width: 100px;
+    height: 38px;
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 18px;
+    color: #666;
+}
+.body .content-body {
+    height: 500px;
+    /* background-color: pink; */
+}
+.symbol {
+    display: none;
+}
+/* information */
+.body .content-body .information {
+    position: relative;
+    display: block;
+}
+.body .content-body .information .left {
+    width: 120px;
+    height: 160px;
+    position: absolute;
+    top: 60px;
+    left: 80px;
+}
+.body .content-body .information .left img {
+    width: 120px;
+    height: 160px;
+}
+.body .content-body .information .right {
+    width: 600px;
+    height: 300px;
+    position: absolute;
+    top: 0px;
+    right: 90px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+}
+.body .content-body .information .right ul:nth-child(1) {
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+.body .content-body .information .right ul:nth-child(2) {
+    position: absolute;
+    top: 10px;
+    right: 0;
+}
+.body .content-body .information .right li {
+    width: 280px;
+    border-bottom: 1px dashed #666;
+    font-size: 16px;
+    line-height: 50px;
+    color: #333;
+}
+/* experience */
+.body .content-body .experience {
+    width: 900px;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+.body .content-body .experience .line {
+    width: 6px;
+    height: 300px;
+    border-radius: 3px;
+    background: linear-gradient(#3CB371, #F0FFF0);
+    position: absolute;
+    left: 70px;
+    top: 60px;
+}
+.body .content-body .experience .right {
+    width: 720px;
+    height: 300px;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+/* project */
+.body .content-body .project {
+    width: 900px;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+/* show */
+.body .content-body .show {
+
+}
+/* aboutme */
+.body .content-body .aboutme {
+    
+}
