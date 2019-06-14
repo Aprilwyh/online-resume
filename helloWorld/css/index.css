@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-width: 1300px;
+    min-height: 770px;
+}
+li {
+    list-style: none;
+}
+button {
+    outline: none;
+}
+p,
+span,
+div,
+h2,
+button {
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    white-space:nowrap;
+}
+.first {
+    width: 100%;
+    height: 770px;
+    position: relative;
+}
+.first-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.first-bg > video {  
+    width: 100%;
+    max-height: 770px;
+    vertical-align: bottom;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.first-cn1 {
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(rgba(0, 0, 0, 0), #000);  
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+}
+.first-cn {
+    width: 100%;
+    height: 100px;
+    background-color: #000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.first-cn > h2 {
+    color: #fff;
+    position: absolute;
+    bottom: 5%;
+    left: 20%;
+}
+.first-cn > h2 span:nth-child(1) {
+    font-size: 90px;
+    font-weight: 300;
+}
+.first-cn > h2 span:nth-child(2) {
+    font-size: 30px;
+    font-weight: 100;
+}
+.second-bg {
+    width: 100%;
+    height: 800px;
+    background: url("../images/star.jpeg") no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+.second-cn1 {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(rgba(0, 0, 0, 0), #000);  
+    position: absolute;
+    top: 1200px;
+    left: 0;
+}
+.second-cn {
+    width: 100%;
+    height: 100px;
+    background-color: #000;
+    position: absolute;
+    top: 1500px;
+    left: 0;
+}
+.second-cn > h2 {
+    color: #fff;
+    position: absolute;
+    bottom: 5%;
+    left: 70%;
+}
+.second-cn > h2 span:nth-child(1),
+.second-cn > h2 span:nth-child(3) {
+    font-size: 30px;
+    font-weight: 100;
+}
+.second-cn > h2 span:nth-child(2) {
+    font-size: 90px;
+    font-weight: 300;
+}
+.third-bg {
+    width: 100%;
+    height: 800px;
+    background: url("../images/road.jpg") no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.third-cn1 {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(rgba(0, 0, 0, 0), #000);  
+    position: absolute;
+    top: 2000px;
+    left: 0;
+}
+.third-cn {
+    width: 100%;
+    height: 100px;
+    background-color: #000;
+    position: absolute;
+    top: 2300px;
+    left: 0;
+}
+.third-cn > h2 {
+    color: #fff;
+    position: absolute;
+    bottom: 5%;
+    left: 40%;
+}
+.third-cn > h2 span:nth-child(1),
+.third-cn > h2 span:nth-child(2),
+.third-cn > h2 span:nth-child(4) {
+    font-size: 30px;
+    font-weight: 100;
+}
+.third-cn > h2 span:nth-child(3) {
+    font-size: 90px;
+    font-weight: 300;
+}
+/* animation */
+.first-bg > p {
+    position: absolute;
+	top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 80px;
+    color: #fff;
+    animation: words01 2s;
+}
+@keyframes words01 {
+    0% {
+		left: 55%;
+	}
+	50% {
+		left: 45%;
+	}
+	100% {
+        left: 50%;
+	}
+}
+.first-bg > p:hover {
+    color: #000;
+}
+.first-bg > button {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, .6);
+    border-radius: 50%;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 99;
+    font-size: 30px;
+    color: #666;
+    border: 1px solid #fff;
+    cursor: pointer;
+    transition: all 1s;
+    text-align: center;
+}
+.first-bg .changebutton {
+    transform: translateX(220px) translateY(-10px);
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+}
+.first-bg .resetbutton {
+    transform: translateX(0px) translateY(0px);
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+}
+.first-bg > nav {
+    width: 0px;
+    height: 100%;
+    background: rgba(0, 0, 0, .3);
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 1s;
+}
+
+
+
+.second-bg > div:nth-child(1) {
+    width: 800px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, .3);
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 30px;
+    overflow: hidden;
+    border: 1px solid #fff;
+}
+.second-bg > div:nth-child(1) p {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);  
+    font-size: 30px;
+    color: #fff;
+    left: 30px;
+}
+.second-bg > div:nth-child(2) {
+    width: 800px;
+    height: 360px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all .5s;
+}
+.second-bg > div:nth-child(2) span {
+    position: absolute;
+    top: 0;
+    font-size: 30px;
+    color: #fff;
+    text-align: right;
+    line-height: 60px;  
+    right: 20px;
+    cursor: pointer;
+}
+.second-bg > div:nth-child(2):hover {
+    opacity: 1;
+    z-index: 10;
+}
+.second-bg > div:nth-child(2) ul {
+    width: 600px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, .3);
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+}
+.second-bg > div:nth-child(2) ul li {
+    color: #fff;
+    font-size: 20px;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    margin-bottom: 10px;
+    padding-left: 30px;
+}
+.second-bg > div:nth-child(2) ul li:hover {
+    background-color: rgba(255, 255,255, .4);
+}
