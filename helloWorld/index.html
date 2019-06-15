@@ -10,13 +10,54 @@
 <body>
     <div class="first">
         <div class="first-bg">
+            <a id="#"></a>
             <video autoplay muted loop>
                 <source src="./video/sea.mp4" type="video/mp4">
             </video>
             <p>世界那么大，<br>想去看什么？</p>
 
             <button>导航</button>
-            <nav></nav>
+            <div id="cover"></div>
+            <nav>
+                <ul>
+                    <li>
+                        <button></button>
+                        <span></span>
+                        <a>首页</a>
+                        <p>想去哪里，就去哪里！</p>
+                    </li>
+                    <li>
+                        <button></button>
+                        <span></span>
+                        <a>去看海</a>
+                        <p>首页视频加载较慢，请耐心等待~</p>
+                    </li>
+                    <li>
+                        <button></button>
+                        <span></span>
+                        <a href="#star">去看星空</a>
+                        <p>听说，今晚的星星很好看</p>
+                    </li>
+                    <li>
+                        <button></button>
+                        <span></span>
+                        <a href="#road">去看远方</a>
+                        <p>享你所想，见你所爱</p>
+                    </li>
+                    <li>
+                        <button></button>
+                        <span></span>
+                        <a target="_blank" href="https://aprilwyh.github.io/online-resume/resume/">关于我</a>
+                        <p>闲来无事特别爱敲代码</p>
+                    </li>
+                    <li>
+                        <button></button>
+                        <span></span>
+                        <a>浏览本站</a>
+                        <p>向下滚动即可浏览</p>
+                    </li>
+                </ul>
+            </nav>
         </div>
         <div class="first-cn1"></div>
         <div class="first-cn">
@@ -27,6 +68,7 @@
         </div>
     </div>
     <div class="second-bg">
+        <a id="star"></a>
         <div>
             <p>哪里的风景最优美？想去看山河看星海</p>           
         </div>
@@ -49,8 +91,22 @@
             <span>空</span>&nbsp;
             <span>。</span>
         </h2>
+        <a href="#">↑</a>
     </div>
     <div class="third-bg">
+        <a id="road"></a>
+        <span>
+            <p>享</p>
+            <p>你</p>
+            <p>所</p>
+            <p>想</p>
+            <p>，</p>
+            <p>见</p>
+            <p>你</p>
+            <p>所</p>
+            <p>爱</p>
+            <p>。</p>
+        </span>
     </div>
     <div class="third-cn1"></div>
     <div class="third-cn">
@@ -60,23 +116,31 @@
             <span>远</span>&nbsp;&nbsp;
             <span>方 。</span>
         </h2>
+        <a href="#">↑</a>
     </div>
     <script>
         var button = document.querySelector("button");
         var nav = document.querySelector("nav");
         var navW = document.defaultView.getComputedStyle(nav);
-        console.log(button.style.transform);
+        var a = nav.querySelectorAll("a");
+        var cover = document.getElementById("cover");
         button.addEventListener("click", function() {
             if(navW.width == "0px") {
-                nav.style.width = 300+"px";
-                this.innerText = "×";
                 this.setAttribute("class", "first-bg changebutton");
+                setStyle(300, "×", 1, "none");
             }else if(navW.width == "300px") {
-                nav.style.width = 0+"px";
-                this.innerText = "导航";
                 this.setAttribute("class", "first-bg resetbutton");
+                setStyle(0, "导航", 0, "block");
             }   
         });
+        function setStyle(width, innerText, opacity, display) {
+            nav.style.width = width+"px";
+            button.innerText = innerText;
+            for(var i=0; i<a.length; i++) {
+                a[i].style.opacity = opacity;
+            }
+            cover.style.display = display;
+        }
     </script>
 </body>
 </html>
