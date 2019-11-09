@@ -7,6 +7,8 @@ import router from './router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
+// 引入字体图标
+import './assets/iconfont/iconfont.css'
 
 Vue.config.productionTip = false
 
