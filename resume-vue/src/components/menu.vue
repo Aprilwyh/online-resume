@@ -1,6 +1,5 @@
 <template>
   <div class="menu-box" :style="'height:' + height + 'px;'">
-    <i class="iconfont icon-menu"></i>
     <div>
       1
       <br />2
@@ -50,7 +49,7 @@ export default {
   name: "showMenu",
   data() {
     return {
-      height: document.documentElement.clientHeight
+      height: document.documentElement.clientHeight - 70
     };
   },
   mounted() {
@@ -60,7 +59,7 @@ export default {
     getHeight() {
       window.onresize = () => {
         return (() => {
-          window.height = document.documentElement.clientHeight;
+          window.height = document.documentElement.clientHeight - 70;
           this.height = window.height;
         })();
       };
@@ -74,14 +73,7 @@ export default {
   width: 25%;
   overflow-y: auto;
   position: fixed;
-  top: 0%;
+  top: 70px;
   left: 0%;
-}
-.menu-box i {
-  font-size: 44px;
-  position: absolute;
-  top: 5%;
-  left: 21%;
-  cursor: pointer;
 }
 </style>
