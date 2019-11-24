@@ -88,7 +88,7 @@ export default {
   },
   methods: {
     showMenu() {
-      if (this.isShow) {
+      /* if (this.isShow) {
         // 隐藏菜单
         document.getElementById("line").classList.remove("active");
         this.isShow = false;
@@ -96,7 +96,8 @@ export default {
         // 显示菜单
         document.getElementById("line").classList.add("active");
         this.isShow = true;
-      }
+      } */
+      // TODOvue动画展示
     }
   },
   components: {
