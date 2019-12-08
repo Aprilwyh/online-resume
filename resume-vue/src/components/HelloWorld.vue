@@ -1,84 +1,24 @@
 <template>
   <div class="hello">
     <div class="top-div">
+      <!-- 左上角图标 -->
       <div class="icon" @click="showMenu()" id="icon">
         <span class="line" id="line"></span>
       </div>
-      <div class="left-div" id="menu"></div>
+      <!-- 图标控制菜单时的背景 -->
+      <div class="left-div" v-if="isShow"></div>
+      <span>个 人 简 历</span>
     </div>
-
+    <!-- 左侧导航栏(悬浮) -->
     <show-menu v-if="isShow"></show-menu>
-    <div>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-    </div>
+    <!-- 主要内容展示区 -->
+    <my-content></my-content>
   </div>
 </template>
 
 <script>
 import showMenu from "./menu";
+import myContent from "./content";
 export default {
   name: "HelloWorld",
   data() {
@@ -88,7 +28,7 @@ export default {
   },
   methods: {
     showMenu() {
-      /* if (this.isShow) {
+      if (this.isShow) {
         // 隐藏菜单
         document.getElementById("line").classList.remove("active");
         this.isShow = false;
@@ -96,25 +36,30 @@ export default {
         // 显示菜单
         document.getElementById("line").classList.add("active");
         this.isShow = true;
-      } */
+      }
       // TODOvue动画展示
     }
   },
   components: {
-    "show-menu": showMenu
+    "show-menu": showMenu,
+    "my-content": myContent
   }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.hello {
+  position: relative;
+}
 .top-div {
   height: 70px;
   width: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  position: fixed;
+  background-color: #eee;
+  box-shadow: 0px 0px 8px #888;
+  /*   position: fixed;
   top: 0%;
-  left: 0%;
+  left: 0%; */
 }
 .icon {
   width: 30px;
@@ -157,13 +102,17 @@ export default {
   bottom: 0;
   transform: rotate(-90deg);
 }
+.top-div > span {
+  font-size: 30px;
+  line-height: 20px;
+}
 .left-div {
-  width: 0px;
+  width: 20%;
   height: 70px;
   position: absolute;
   top: 0%;
   left: 0%;
-  background-color: #fff;
+  background: rgba(0, 0, 0, 0.6);
   transition: all 0.5s;
 }
 </style>

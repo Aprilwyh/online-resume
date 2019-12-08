@@ -1,47 +1,37 @@
 <template>
   <div class="menu-box" :style="'height:' + height + 'px;'">
-    <div>
-      1
-      <br />2
-      <br />3
-      <br />4
-      <br />5
-      <br />6
-      <br />7
-      <br />8
-      <br />9
-      <br />10
-      <br />11
-      <br />12
-      <br />13
-      <br />14
-      <br />15
-      <br />16
-      <br />17
-      <br />18
-      <br />19
-      <br />20
-      <br />1
-      <br />2
-      <br />3
-      <br />4
-      <br />5
-      <br />6
-      <br />7
-      <br />8
-      <br />9
-      <br />10
-      <br />11
-      <br />12
-      <br />13
-      <br />14
-      <br />15
-      <br />16
-      <br />17
-      <br />18
-      <br />19
-      <br />20
-    </div>
+    <ul>
+      <li>
+        <span>◇</span>
+        首页
+      </li>
+      <li>自我介绍</li>
+      <li>测试li</li>
+    </ul>
+    <ul>
+      <li>
+        <span>◇</span>
+        项目经验
+      </li>
+      <li>项目简介</li>
+      <li>测试li</li>
+    </ul>
+    <ul>
+      <li>
+        <span>◇</span>
+        测试ul
+      </li>
+      <li>测试li</li>
+      <li>测试li</li>
+    </ul>
+    <ul>
+      <li>
+        <span>◇</span>
+        测试ul
+      </li>
+      <li>测试li</li>
+      <li>测试li</li>
+    </ul>
   </div>
 </template>
 <script>
@@ -68,12 +58,43 @@ export default {
 };
 </script>
 <style scoped>
+* {
+  padding: 0px;
+  margin: 0px;
+}
 .menu-box {
-  background: rgba(0, 0, 0, 0.3);
-  width: 25%;
+  width: 20%;
   overflow-y: auto;
   position: fixed;
   top: 70px;
   left: 0%;
+  overflow-x: hidden;
+}
+.menu-box ul {
+  width: 100%;
+}
+.menu-box ul li {
+  background: rgba(0, 0, 0, 0.6);
+  list-style-type: none;
+  width: 100%;
+  height: 50px;
+}
+.menu-box ul li:hover {
+  color: #39c5bb;
+  cursor: pointer;
+  text-shadow: 0px 0px 5px #39c5bb;
+}
+.menu-box ul li:first-child {
+  font-size: 22px;
+  text-align: left;
+  padding-left: 20%;
+}
+/* .menu-box ul li:first-child span {
+  font-size: 40px;
+} */
+.menu-box ul li {
+  line-height: 50px;
+  color: #222;
+  font-size: 18px;
 }
 </style>
